@@ -1,0 +1,183 @@
+/* Универсальный селектор */
+* {
+	box-sizing: border-box;
+}
+
+/* Основные стили body */
+body {
+	margin: 0;
+	padding: 0px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	color: #333;
+
+}
+
+/* Header */
+.header {
+	margin: 0;
+	padding: 30px 50px;
+	background-color: #fefefe;
+	
+}
+
+.header__title {
+	margin: 0 0 20px 0;
+	font-size: 36px;
+	font-weight: 700;
+	color: #000;
+	text-align: left;
+}
+
+.header__nav {
+	margin: 0;
+	padding: 12px;
+}
+
+/* Навигация */
+.nav__link {
+	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: #333;
+	margin-right: 30px;
+}
+
+.nav__link:hover {
+	color: #ed4001;
+}
+
+/* Main */
+.main {
+	margin: 0;
+	padding: 0 50px 50px 50px;
+}
+
+/* Секция О нас */
+.about {
+	margin: 20px 0;
+	padding: 0;
+}
+
+.about__image {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.about__title {
+	margin: 20px 0;
+	font-size: 28px;
+	font-weight: 700;
+	color: #000;
+}
+
+.about__text {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-weight: 400;
+	color: #333;
+	line-height: 1.6;
+}
+
+/* Секция Преимущества */
+.advantages {
+	margin: 40px 0;
+	padding: 0;
+}
+
+.advantages__title {
+	margin: 20px 0;
+	font-size: 28px;
+	font-weight: 700;
+	color: #000;
+}
+
+.advantages__list {
+	margin: 20px 0;
+	padding-left: 20px;
+}
+
+.advantages__item {
+	margin: 10px 0;
+	font-size: 16px;
+	font-weight: 400;
+	color: #333;
+	line-height: 1.6;
+}
+
+/* Секция Популярные блюда */
+.popular {
+	margin: 40px 0;
+	padding: 0;
+}
+
+.popular__title {
+	margin: 20px 0;
+	font-size: 28px;
+	font-weight: 700;
+	color: #000;
+}
+
+/* Таблица */
+.popular__table {
+	width: 100%;
+	max-width: 800px;
+	margin: 20px 0;
+	padding: 0;
+	border: 1px solid #acaeba;
+	border-collapse: collapse;
+}
+
+.popular__table thead {
+	background-color: #ffffff;
+}
+
+.popular__table th {
+	padding: 15px;
+	border: 1px solid #333;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: #000;
+}
+
+.popular__table td {
+	padding: 12px 15px;
+	border: 1px solid #333;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400;
+	color: #333;
+}
+
+/* Footer */
+.footer {
+	margin: 0;
+	padding: 30px 50px;
+	background-color: black;
+	color: white;
+}
+
+.footer__text {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-weight: 400;
+	color: white;
+}
+
+.footer__link {
+	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: white;
+}
+
+.footer__link:hover {
+	color: #ff6b35;
+}
