@@ -111,6 +111,94 @@
 
 	</main>
 
+	<section class="order-section">
+		<h2 class="order-section__title">Сделать заказ</h2>
+		<form class="order-form" action="https://httpbin.org/post" method="POST">
+			<div class="order-form__container">
+
+				<!-- Блок "Ваш заказ" -->
+				<div class="order-form__block">
+					<h3 class="order-form__subtitle">Ваш заказ</h3>
+
+					<label for="soup" class="order-form__label">Суп</label>
+					<select id="soup" name="soup" class="order-form__select" required>
+						<option value="">— Выберите суп —</option>
+						<option value="borch">Борщ</option>
+						<option value="solyanka">Солянка</option>
+						<option value="mushroom-soup">Грибной суп</option>
+					</select>
+
+					<label for="main-dish" class="order-form__label">Главное блюдо</label>
+					<select id="main-dish" name="main-dish" class="order-form__select" required>
+						<option value="">— Выберите главное блюдо —</option>
+						<option value="fried-potatoes-chanterelles">Жареная картошка с лисичками</option>
+						<option value="pelmeni">Пельмени</option>
+						<option value="stuffed-zucchini">Кабачки фаршированные</option>
+					</select>
+
+					<label for="drink" class="order-form__label">Напиток</label>
+					<select id="drink" name="drink" class="order-form__select" required>
+						<option value="">— Выберите напиток —</option>
+						<option value="orange-juice">Апельсиновый сок</option>
+						<option value="apple-juice">Яблочный сок</option>
+						<option value="pomegranate-juice">Гранатовый сок</option>
+					</select>
+
+					<label for="comment" class="order-form__label">Комментарий к заказу</label>
+					<textarea id="comment" name="comment" class="order-form__textarea" rows="4"></textarea>
+				</div>
+
+				<!-- Блок "Ваши данные" -->
+				<div class="order-form__block">
+					<h3 class="order-form__subtitle">Ваши данные</h3>
+
+					<label for="name" class="order-form__label">Имя</label>
+					<input type="text" id="name" name="name" class="order-form__input" required>
+
+					<label for="email" class="order-form__label">Email</label>
+					<input type="email" id="email" name="email" class="order-form__input" required>
+
+					<div class="order-form__checkbox-wrapper">
+						<input type="checkbox" id="subscribe" name="subscribe" class="order-form__checkbox" checked>
+						<label for="subscribe" class="order-form__checkbox-label">Получать информацию о скидках и акциях</label>
+					</div>
+
+					<label for="phone" class="order-form__label">Номер телефона</label>
+					<input type="tel" id="phone" name="phone" class="order-form__input" required>
+
+					<label for="address" class="order-form__label">Адрес доставки</label>
+					<input type="text" id="address" name="address" class="order-form__input" required>
+					<p class="order-form__hint">Доставка осуществляется только по Москве</p>
+
+					<fieldset class="order-form__fieldset">
+						<legend class="order-form__legend">Время доставки:</legend>
+
+						<div class="order-form__radio-wrapper">
+							<input type="radio" id="asap" name="delivery-time" value="asap" class="order-form__radio" required>
+							<label for="asap" class="order-form__radio-label">Как можно скорее</label>
+						</div>
+
+						<div class="order-form__radio-wrapper">
+							<input type="radio" id="specific-time" name="delivery-time" value="specific-time" class="order-form__radio" required>
+							<label for="specific-time" class="order-form__radio-label">К указанному времени</label>
+						</div>
+					</fieldset>
+
+					<label for="time" class="order-form__label">Укажите время доставки</label>
+					<input type="time" id="time" name="time" class="order-form__input" min="07:00" max="23:00" step="300">
+					<p class="order-form__hint">Доступное время доставки с 7:00 до 23:00</p>
+				</div>
+
+			</div>
+
+			<!-- Кнопки -->
+			<div class="order-form__buttons">
+				<button type="reset" class="order-form__button order-form__button--reset">Сбросить</button>
+				<button type="submit" class="order-form__button order-form__button--submit">Отправить</button>
+			</div>
+		</form>
+	</section>
+
 	<footer id="contacts" class="footer">
 		<p class="footer__text">Позвонить нам <a href="tel:+79183169846" class="footer__link">+7-918-316-98-46</a></p>
 	</footer>
