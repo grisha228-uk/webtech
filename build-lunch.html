@@ -28,84 +28,24 @@
 
 	<main class="main">
 
-		<section class="dishes">
+		<section class="dishes" data-category="soup">
 			<h2 class="dishes__title">Выбрать суп</h2>
 			<div class="dishes__grid">
-				<div class="dish">
-					<img src="img/borch.webp" alt="Борщ" class="dish__image">
-					<p class="dish__price">280₽</p>
-					<p class="dish__name">Борщ</p>
-					<p class="dish__weight">350г</p>
-					<button class="dish__button">Добавить</button>
-				</div>
-				<div class="dish">
-					<img src="img/solyanka.webp" alt="Солянка" class="dish__image">
-					<p class="dish__price">320₽</p>
-					<p class="dish__name">Солянка</p>
-					<p class="dish__weight">350г</p>
-					<button class="dish__button">Добавить</button>
-				</div>
-				<div class="dish">
-					<img src="img/gribnoj.webp" alt="Грибной суп" class="dish__image">
-					<p class="dish__price">260₽</p>
-					<p class="dish__name">Грибной суп</p>
-					<p class="dish__weight">350г</p>
-					<button class="dish__button">Добавить</button>
-				</div>
+				<!-- Блюда будут добавлены через JavaScript -->
 			</div>
 		</section>
 
-		<section class="dishes">
+		<section class="dishes" data-category="main">
 			<h2 class="dishes__title">Выбрать главное блюдо</h2>
 			<div class="dishes__grid">
-				<div class="dish">
-					<img src="img/lisichkikart.png" alt="Жареная картошка с лисичками" class="dish__image">
-					<p class="dish__price">385₽</p>
-					<p class="dish__name">Жареная картошка с лисичками</p>
-					<p class="dish__weight">400г</p>
-					<button class="dish__button">Добавить</button>
-				</div>
-				<div class="dish">
-					<img src="img/pelmeni.webp" alt="Пельмени" class="dish__image">
-					<p class="dish__price">225₽</p>
-					<p class="dish__name">Пельмени</p>
-					<p class="dish__weight">300г</p>
-					<button class="dish__button">Добавить</button>
-				</div>
-				<div class="dish">
-					<img src="img/кабачки.webp" alt="Кабачки фаршированные" class="dish__image">
-					<p class="dish__price">270₽</p>
-					<p class="dish__name">Кабачки фаршированные <br> Вике скидка 50%</p>
-					<p class="dish__weight">350г</p>
-					<button class="dish__button">Добавить</button>
-				</div>
+				<!-- Блюда будут добавлены через JavaScript -->
 			</div>
 		</section>
 
-		<section class="dishes">
+		<section class="dishes" data-category="drink">
 			<h2 class="dishes__title">Выбрать напиток</h2>
 			<div class="dishes__grid">
-				<div class="dish">
-					<img src="img/apelsinoviysok.webp" alt="Апельсиновый сок" class="dish__image">
-					<p class="dish__price">120₽</p>
-					<p class="dish__name">Апельсиновый сок</p>
-					<p class="dish__weight">300мл</p>
-					<button class="dish__button">Добавить</button>
-				</div>
-				<div class="dish">
-					<img src="img/yablochniysok.jfif" alt="Яблочный сок" class="dish__image">
-					<p class="dish__price">110₽</p>
-					<p class="dish__name">Яблочный сок</p>
-					<p class="dish__weight">300мл</p>
-					<button class="dish__button">Добавить</button>
-				</div>
-				<div class="dish">
-					<img src="img/granatsok.webp" alt="Гранатовый сок" class="dish__image">
-					<p class="dish__price">150₽</p>
-					<p class="dish__name">Гранатовый сок</p>
-					<p class="dish__weight">300мл</p>
-					<button class="dish__button">Добавить</button>
-				</div>
+				<!-- Блюда будут добавлены через JavaScript -->
 			</div>
 		</section>
 
@@ -120,29 +60,9 @@
 				<div class="order-form__block">
 					<h3 class="order-form__subtitle">Ваш заказ</h3>
 
-					<label for="soup" class="order-form__label">Суп</label>
-					<select id="soup" name="soup" class="order-form__select" required>
-						<option value="">— Выберите суп —</option>
-						<option value="borch">Борщ</option>
-						<option value="solyanka">Солянка</option>
-						<option value="mushroom-soup">Грибной суп</option>
-					</select>
-
-					<label for="main-dish" class="order-form__label">Главное блюдо</label>
-					<select id="main-dish" name="main-dish" class="order-form__select" required>
-						<option value="">— Выберите главное блюдо —</option>
-						<option value="fried-potatoes-chanterelles">Жареная картошка с лисичками</option>
-						<option value="pelmeni">Пельмени</option>
-						<option value="stuffed-zucchini">Кабачки фаршированные</option>
-					</select>
-
-					<label for="drink" class="order-form__label">Напиток</label>
-					<select id="drink" name="drink" class="order-form__select" required>
-						<option value="">— Выберите напиток —</option>
-						<option value="orange-juice">Апельсиновый сок</option>
-						<option value="apple-juice">Яблочный сок</option>
-						<option value="pomegranate-juice">Гранатовый сок</option>
-					</select>
+					<div id="order-display">
+						<p class="order-empty">Ничего не выбрано</p>
+					</div>
 
 					<label for="comment" class="order-form__label">Комментарий к заказу</label>
 					<textarea id="comment" name="comment" class="order-form__textarea" rows="4"></textarea>
@@ -202,6 +122,10 @@
 	<footer id="contacts" class="footer">
 		<p class="footer__text">Позвонить нам <a href="tel:+79183169846" class="footer__link">+7-918-316-98-46</a></p>
 	</footer>
+
+	<script src="dishes.js"></script>
+	<script src="display-dishes.js"></script>
+	<script src="order.js"></script>
 
 </body>
 
