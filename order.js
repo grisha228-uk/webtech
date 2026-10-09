@@ -108,10 +108,26 @@ function handleDishClick(event) {
 	updateOrderDisplay();
 }
 
+// Функция для сброса заказа
+function resetOrder() {
+	selectedDishes.soup = null;
+	selectedDishes.main = null;
+	selectedDishes.drink = null;
+	updateOrderDisplay();
+}
+
 // Добавляем обработчик события после загрузки страницы
 document.addEventListener('DOMContentLoaded', function() {
 	// Добавляем обработчик клика на все блюда
 	document.addEventListener('click', handleDishClick);
+
+	// Добавляем обработчик на кнопку сброса формы
+	const orderForm = document.querySelector('.order-form');
+	if (orderForm) {
+		orderForm.addEventListener('reset', function() {
+			resetOrder();
+		});
+	}
 
 	// Инициализируем отображение заказа
 	updateOrderDisplay();
