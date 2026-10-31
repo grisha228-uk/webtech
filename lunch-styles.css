@@ -406,3 +406,36 @@
 	color: tomato;
 }
 
+/* Стили для фильтров */
+.dishes__filters {
+	display: flex;
+	gap: 10px;
+	margin: 20px 0;
+	flex-wrap: wrap;
+}
+
+.filter-button {
+	padding: 10px 20px;
+	background-color: #f1eee9;
+	border: 2px solid transparent;
+	border-radius: 50px;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	color: #333;
+	transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+	background-color: #e0ddd8;
+	border-color: #d0cdc8;
+}
+
+.filter-button.active {
+	background-color: #d4f4dd;
+	border-color: #28a745;
+	color: #155724;
+	font-weight: 600;
+}
+

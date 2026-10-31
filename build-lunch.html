@@ -30,6 +30,11 @@
 
 		<section class="dishes" data-category="soup">
 			<h2 class="dishes__title">Выбрать суп</h2>
+			<div class="dishes__filters">
+				<button class="filter-button" data-kind="fish">рыбный</button>
+				<button class="filter-button" data-kind="meat">мясной</button>
+				<button class="filter-button" data-kind="veg">вегетарианский</button>
+			</div>
 			<div class="dishes__grid">
 				<!-- Блюда будут добавлены через JavaScript -->
 			</div>
@@ -37,6 +42,35 @@
 
 		<section class="dishes" data-category="main">
 			<h2 class="dishes__title">Выбрать главное блюдо</h2>
+			<div class="dishes__filters">
+				<button class="filter-button" data-kind="fish">рыбное</button>
+				<button class="filter-button" data-kind="meat">мясное</button>
+				<button class="filter-button" data-kind="veg">вегетарианское</button>
+			</div>
+			<div class="dishes__grid">
+				<!-- Блюда будут добавлены через JavaScript -->
+			</div>
+		</section>
+
+		<section class="dishes" data-category="salad">
+			<h2 class="dishes__title">Выбрать салат или стартер</h2>
+			<div class="dishes__filters">
+				<button class="filter-button" data-kind="fish">рыбный</button>
+				<button class="filter-button" data-kind="meat">мясной</button>
+				<button class="filter-button" data-kind="veg">вегетарианский</button>
+			</div>
+			<div class="dishes__grid">
+				<!-- Блюда будут добавлены через JavaScript -->
+			</div>
+		</section>
+
+		<section class="dishes" data-category="dessert">
+			<h2 class="dishes__title">Выбрать десерт</h2>
+			<div class="dishes__filters">
+				<button class="filter-button" data-kind="icecream">мороженое</button>
+				<button class="filter-button" data-kind="snack">снеки</button>
+				<button class="filter-button" data-kind="cake">торты</button>
+			</div>
 			<div class="dishes__grid">
 				<!-- Блюда будут добавлены через JavaScript -->
 			</div>
@@ -44,6 +78,10 @@
 
 		<section class="dishes" data-category="drink">
 			<h2 class="dishes__title">Выбрать напиток</h2>
+			<div class="dishes__filters">
+				<button class="filter-button" data-kind="cold">холодный</button>
+				<button class="filter-button" data-kind="hot">горячий</button>
+			</div>
 			<div class="dishes__grid">
 				<!-- Блюда будут добавлены через JavaScript -->
 			</div>
@@ -125,6 +163,7 @@
 
 	<script src="dishes.js"></script>
 	<script src="display-dishes.js"></script>
+	<script src="filter.js"></script>
 	<script src="order.js"></script>
 
 </body>

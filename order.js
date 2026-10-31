@@ -4,7 +4,9 @@
 const selectedDishes = {
 	soup: null,
 	main: null,
-	drink: null
+	drink: null,
+	salad: null,
+	dessert: null
 };
 
 // Функция для обновления отображения заказа
@@ -12,7 +14,7 @@ function updateOrderDisplay() {
 	const orderDisplay = document.getElementById('order-display');
 
 	// Проверяем, выбрано ли хотя бы одно блюдо
-	const hasSelection = selectedDishes.soup || selectedDishes.main || selectedDishes.drink;
+	const hasSelection = selectedDishes.soup || selectedDishes.main || selectedDishes.drink || selectedDishes.salad || selectedDishes.dessert;
 
 	if (!hasSelection) {
 		orderDisplay.innerHTML = '<p class="order-empty">Ничего не выбрано</p>';
@@ -55,6 +57,23 @@ function updateOrderDisplay() {
 		`;
 	}
 
+	// Салат/стартер
+	if (selectedDishes.salad) {
+		html += `
+			<div class="order-item">
+				<p class="order-item__category">Салат/стартер</p>
+				<p class="order-item__name">${selectedDishes.salad.name} ${selectedDishes.salad.price}₽</p>
+			</div>
+		`;
+	} else {
+		html += `
+			<div class="order-item">
+				<p class="order-item__category">Салат/стартер</p>
+				<p class="order-item__empty">Блюдо не выбрано</p>
+			</div>
+		`;
+	}
+
 	// Напиток
 	if (selectedDishes.drink) {
 		html += `
@@ -72,11 +91,30 @@ function updateOrderDisplay() {
 		`;
 	}
 
+	// Десерт
+	if (selectedDishes.dessert) {
+		html += `
+			<div class="order-item">
+				<p class="order-item__category">Десерт</p>
+				<p class="order-item__name">${selectedDishes.dessert.name} ${selectedDishes.dessert.price}₽</p>
+			</div>
+		`;
+	} else {
+		html += `
+			<div class="order-item">
+				<p class="order-item__category">Десерт</p>
+				<p class="order-item__empty">Десерт не выбран</p>
+			</div>
+		`;
+	}
+
 	// Стоимость заказа
 	const totalPrice =
 		(selectedDishes.soup?.price || 0) +
 		(selectedDishes.main?.price || 0) +
-		(selectedDishes.drink?.price || 0);
+		(selectedDishes.drink?.price || 0) +
+		(selectedDishes.salad?.price || 0) +
+		(selectedDishes.dessert?.price || 0);
 
 	html += `
 		<div class="order-total">
@@ -113,6 +151,8 @@ function resetOrder() {
 	selectedDishes.soup = null;
 	selectedDishes.main = null;
 	selectedDishes.drink = null;
+	selectedDishes.salad = null;
+	selectedDishes.dessert = null;
 	updateOrderDisplay();
 }
 
